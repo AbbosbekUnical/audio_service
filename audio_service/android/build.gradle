@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:7.3.1'
     }
 }
 
@@ -31,7 +31,9 @@ android {
     if (project.android.hasProperty("namespace")) {
         namespace 'com.ryanheise.audioservice'
     }
-    compileSdkVersion 33
+    compileSdk 34
+    buildToolsVersion = "34.0.0"
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -39,7 +41,7 @@ android {
     }
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 33
+        targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
